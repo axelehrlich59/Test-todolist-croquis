@@ -1,6 +1,6 @@
 
 
-var myNodelist = document.getElementsByTagName("LI");
+var myNodelist = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -20,7 +20,6 @@ for (i = 0; i < close.length; i++) {
 }
 
 
-// Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -31,20 +30,20 @@ list.addEventListener('click', function(ev) {
 
 
 function valeur() {
+  var li = document.createElement("li");
 var inputValue = document.getElementById("myOutput").value;
- var li = document.createElement("li");
  var t = document.createTextNode(inputValue);
 
  li.appendChild(t);
 
- if(inputValue === "") {
+ if(inputValue === '') {
      alert("Vous devez remplir le champ");
  } else {
      document.getElementById("myUL").appendChild(li);
  } document.getElementById("myOutput").value = "";
 
  var span = document.createElement("SPAN");
- var txt = document.createElement("\u00D7");
+ var txt = document.createTextNode("\u00D7");
  span.className = "close";
  span.appendChild(txt);
  li.appendChild(span);
@@ -54,6 +53,7 @@ var inputValue = document.getElementById("myOutput").value;
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-    }}
+    }
+  }
  
-};
+}
