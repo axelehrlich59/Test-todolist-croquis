@@ -1,3 +1,24 @@
+/* function store() {
+var outputElement = document.getElementById("myOutput").value;
+window.localStorage.myitems = outputElement.innerHTML;
+}
+
+function getValues() {
+  var storedValues = window.localStorage.myitems;
+  var outputElement = document.getElementById("myOutput").value;
+  if(!storedValues) {
+    outputElement.innerHTML = '<li>Make a to do list</li>'+
+    '<li>Check off first thing on the to do list</li>'+
+    '<li>Realize you have already accomplished 2 things in the list</li>'+
+    '<li>Reward yourself with a nap</li>';
+}
+else {
+outputElement.innerHTML = storedValues;
+}
+}
+
+*/
+
 
 
 var myNodelist = document.getElementsByTagName("li");
@@ -34,6 +55,7 @@ function valeur() {
 var inputValue = document.getElementById("myOutput").value;
  var t = document.createTextNode(inputValue);
 
+
  li.appendChild(t);
 
  if(inputValue === '') {
@@ -55,5 +77,8 @@ var inputValue = document.getElementById("myOutput").value;
       div.parentNode.removeChild(div);
     }
   }
- 
+// store();
 }
+
+
+// getValues();
